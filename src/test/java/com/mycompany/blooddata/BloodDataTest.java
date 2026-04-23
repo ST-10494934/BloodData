@@ -5,12 +5,13 @@
 package com.mycompany.blooddata;
 import java.util.Scanner;
 
+
 /**
  *
  * @author lab_services_student
  */
 public class BloodDataTest {
-    public static void main(String[]args){
+    public static void main(String[] args){ 
         Scanner input = new Scanner (System.in);
         
         //Declare two BloodData objects
@@ -21,8 +22,8 @@ public class BloodDataTest {
         System.out.print("Enter blood type (O,A,B or AB): ");
         String userBloodType = input.nextLine();
         
-        System.out.print("Enter Rh factor (+ or -)");
-        String userRHFactor = input.nextLine();
+        System.out.print("Enter Rh factor (+ or -): "); 
+        String userRhFactor = input.nextLine();
         
         BloodData userBlood = new BloodData(userBloodType, userRhFactor);
         
@@ -33,13 +34,19 @@ public class BloodDataTest {
         System.out.println("\nUser Blood Data:");
         displayBloodData(userBlood);
         
-        defaultBlood.setBloodType(userBloodype);
+        defaultBlood.setBloodType(userBloodType);
         defaultBlood.setRhFactor(userRhFactor);
         
         System.out.println("\n---After Modifying Default Object---");
-        System.out.println("Blood Type:" + blood.getBloodType());
-        System.out.println("Rh Fcator:" + blood.getRhFactor());
+        System.out.println("Default Blood data:");
+        displayBloodData(defaultBlood);
+        input.close();
      
+    }
+    //Helper method
+    public static void displayBloodData(BloodData blood){
+        System.out.println("Blood Type: " + blood.getBloodType());
+        System.out.println("Rh Factor: " + blood.getRhFactor());
     }
     
 }
