@@ -20,5 +20,24 @@ public class BloodData {
     }
     
     //Parameterized constructor 
-    
+    public BloodData(String bloodType, String rhFactor){
+        this.bloodType = bloodType;
+        this.rhFactor = rhFactor;
+    }
+    //Getter for bloodType
+    public String getBloodType(){
+        return bloodType;
+    }
+    //Setter for bloodType
+    public void setBloodType(String bloodType){
+        this.bloodType = bloodType;
+    }
+    //Getter for rhFactor
+    public String getRhFactor(){
+        return rhFactor;
+    }
+    //Setter for rhFactor 
+    public void setRhFactor(String rhFactor){
+        this.rhFactor = rhFactor;
+    }
 }
